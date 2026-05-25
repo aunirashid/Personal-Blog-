@@ -290,13 +290,13 @@ body.fade-out {
   box-shadow: 0 12px 30px rgba(217, 140, 163, 0.16);
 }
 
-.contact-card h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 45px;
+.diary-card h1 span {
+  font-family: 'Playfair Display', serif;
   color: #d98ca3;
-  font-weight: normal;
-  margin-bottom: 20px;
-  text-align: center;
+  font-size: 55px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
 form input,
