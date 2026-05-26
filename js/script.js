@@ -1,27 +1,10 @@
-/* =========================
-   HOMEPAGE OPEN ANIMATION
-========================= */
-
 function openDiary() {
-  const diaryCard = document.getElementById("diaryCard");
-
-  if (diaryCard) {
-    diaryCard.classList.add("open");
-  }
-
-  setTimeout(function () {
-    document.body.classList.add("fade-out");
-  }, 500);
+  document.body.classList.add("fade-out");
 
   setTimeout(function () {
     window.location.href = "about.html";
-  }, 1000);
+  }, 800);
 }
-
-
-/* =========================
-   SOFT MUSIC PLAYER
-========================= */
 
 const music = document.getElementById("bgMusic");
 const musicPlayer = document.querySelector(".music-player");
@@ -29,7 +12,6 @@ const musicText = document.getElementById("musicText");
 
 function toggleMusic() {
   if (!music || !musicPlayer || !musicText) {
-    alert("Music player is not available on this page.");
     return;
   }
 
@@ -39,9 +21,8 @@ function toggleMusic() {
         musicPlayer.classList.add("playing");
         musicText.innerHTML = "♫ Playing";
       })
-      .catch(function (error) {
-        console.log("Music error:", error);
-        alert("Music cannot play. Please check your song.mp3 file.");
+      .catch(function () {
+        alert("Music cannot play. Please check your music/song.mp3 file.");
       });
   } else {
     music.pause();
@@ -50,19 +31,9 @@ function toggleMusic() {
   }
 }
 
-
-/* =========================
-   BLOG PAGE BUTTON
-========================= */
-
 function showMessage() {
   alert("This is a sample blog post preview.");
 }
-
-
-/* =========================
-   CONTACT FORM BUTTON
-========================= */
 
 function sendMessage() {
   alert("Thank you! Your message has been received.");

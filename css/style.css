@@ -15,57 +15,101 @@ body {
 .home-page {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 20% 20%, #f7d6df 0%, transparent 30%),
-    radial-gradient(circle at 80% 80%, #fde8ee 0%, transparent 35%),
+    radial-gradient(circle at 15% 20%, #f7d6df 0%, transparent 28%),
+    radial-gradient(circle at 85% 75%, #fde8ee 0%, transparent 30%),
     #fffaf8;
+  overflow-x: hidden;
+}
+
+.home-nav {
+  width: 88%;
+  margin: 25px auto;
+  padding: 16px 28px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #f5d3dd;
+  border-radius: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(217, 140, 163, 0.14);
 }
 
-.home-container {
-  width: 90%;
-  max-width: 650px;
-  perspective: 1000px;
+.home-logo,
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #d98ca3;
 }
 
-.diary-card {
-  background: rgba(255, 255, 255, 0.88);
-  padding: 70px 45px;
-  border-radius: 28px;
-  text-align: center;
-  box-shadow: 0 20px 50px rgba(217, 140, 163, 0.25);
-  border: 1px solid #f7d6df;
-  animation: softFade 1.1s ease;
-  transform-origin: left;
+.home-links {
+  display: flex;
+  gap: 24px;
+}
+
+.home-links a {
+  text-decoration: none;
+  color: #4b3b40;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.home-links a:hover {
+  color: #d98ca3;
+}
+
+.landing {
+  width: 88%;
+  min-height: 60vh;
+  margin: 45px auto 25px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.landing-left {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #f5d3dd;
+  border-radius: 30px;
+  padding: 70px 60px;
+  box-shadow: 0 20px 50px rgba(217, 140, 163, 0.18);
+  animation: softFade 1s ease;
 }
 
 .small-text {
   color: #d98ca3;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   font-size: 13px;
   margin-bottom: 12px;
 }
 
-.diary-card h1 {
-  font-size: 42px;
-  color: #4b3b40;
-  margin-bottom: 18px;
+.landing-left h1 {
+  font-size: 50px;
+  line-height: 1.25;
+  color: #35303a;
+  margin: 15px 0 20px;
 }
 
-.diary-card h1 span {
-  font-family: 'Great Vibes', cursive;
+.landing-left h1 span {
+  font-family: 'Playfair Display', serif;
   color: #d98ca3;
-  font-size: 58px;
-  font-weight: normal;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .intro {
-  color: #6d5a60;
+  max-width: 650px;
   line-height: 1.8;
-  margin-bottom: 35px;
+  color: #5f5055;
+  margin-bottom: 32px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .enter-btn {
@@ -85,12 +129,97 @@ body {
   background: #c97993;
 }
 
-.diary-card.open {
-  animation: openDiary 0.9s ease forwards;
+.outline-btn {
+  text-decoration: none;
+  padding: 14px 30px;
+  border: 1px solid #d98ca3;
+  color: #d98ca3;
+  border-radius: 40px;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-body.fade-out {
-  animation: fadeOut 0.8s ease forwards;
+.outline-btn:hover {
+  background: #fde8ee;
+  transform: translateY(-3px);
+}
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #f5d3dd;
+  border-radius: 30px;
+  padding: 45px 30px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(217, 140, 163, 0.18);
+  animation: softFade 1.2s ease;
+}
+
+.profile-circle {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f7d6df, #d98ca3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(217, 140, 163, 0.28);
+}
+
+.profile-card h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.profile-card p {
+  color: #6d5a60;
+  margin-bottom: 22px;
+}
+
+.mini-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mini-info span {
+  background: #fde8ee;
+  color: #b76e85;
+  padding: 8px 13px;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.quick-section {
+  width: 88%;
+  margin: 25px auto 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.quick-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #f5d3dd;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(217, 140, 163, 0.12);
+}
+
+.quick-card h3 {
+  color: #d98ca3;
+  margin-bottom: 10px;
+}
+
+.quick-card p {
+  color: #5f5055;
+  line-height: 1.7;
+  font-size: 14px;
 }
 
 /* MUSIC PLAYER */
@@ -99,7 +228,7 @@ body.fade-out {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid #f3c7d5;
   backdrop-filter: blur(10px);
   padding: 12px 18px;
@@ -109,6 +238,7 @@ body.fade-out {
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(217, 140, 163, 0.18);
   transition: 0.3s ease;
+  z-index: 99;
 }
 
 .music-player:hover {
@@ -120,7 +250,7 @@ body.fade-out {
   background: #f7d6df;
 }
 
-/* NAVBAR */
+/* NAVBAR FOR OTHER PAGES */
 
 .navbar {
   width: 90%;
@@ -135,9 +265,7 @@ body.fade-out {
 }
 
 .logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 34px;
-  color: #d98ca3;
+  font-size: 28px;
 }
 
 .navbar ul {
@@ -170,10 +298,10 @@ body.fade-out {
 }
 
 .page-header h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 70px;
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
   color: #d98ca3;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .page-header p {
@@ -207,10 +335,10 @@ body.fade-out {
 }
 
 .about-card h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 43px;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
   color: #d98ca3;
-  font-weight: normal;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -290,13 +418,13 @@ body.fade-out {
   box-shadow: 0 12px 30px rgba(217, 140, 163, 0.16);
 }
 
-.diary-card h1 span {
-  font-family: 'Cormorant Garamond', serif;
+.contact-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
   color: #d98ca3;
-  font-size: 45px;
   font-weight: 600;
-  font-style: italic;
-  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 form input,
@@ -317,6 +445,10 @@ form textarea:focus {
 
 /* ANIMATION */
 
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
 @keyframes softFade {
   from {
     opacity: 0;
@@ -325,21 +457,6 @@ form textarea:focus {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes openDiary {
-  0% {
-    transform: rotateY(0deg) scale(1);
-    opacity: 1;
-  }
-  60% {
-    transform: rotateY(-18deg) scale(0.96);
-    opacity: 0.85;
-  }
-  100% {
-    transform: rotateY(-35deg) scale(0.9);
-    opacity: 0;
   }
 }
 
@@ -352,35 +469,38 @@ form textarea:focus {
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
+  .landing {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-section,
   .about-section,
   .blog-section {
     grid-template-columns: 1fr;
   }
 
+  .home-nav,
   .navbar {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
 
+  .home-links,
   .navbar ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
 
-  .diary-card {
-    padding: 55px 25px;
+  .landing-left {
+    padding: 45px 28px;
   }
 
-  .diary-card h1 {
-    font-size: 32px;
-  }
-
-  .diary-card h1 span {
-    font-size: 48px;
+  .landing-left h1 {
+    font-size: 36px;
   }
 
   .page-header h1 {
-    font-size: 55px;
+    font-size: 42px;
   }
 }
