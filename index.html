@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>My Personal Blog</title>
 
   <link rel="stylesheet" href="css/style.css">
@@ -13,96 +12,43 @@
 
 <body class="home-page">
 
-  <!-- NAVBAR -->
+  <main class="hero">
 
-  <nav class="home-nav">
+    <p class="mini-title">PERSONAL BLOG</p>
 
-    <div class="home-logo">
-      MyBlog ♡
-    </div>
-
-    <div class="home-links">
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-  </nav>
-
-  <!-- LANDING SECTION -->
-
-  <main class="landing">
-
-    <section class="landing-left">
-
-      <p class="small-text">
-        PERSONAL BLOG
-      </p>
-
-      <h1>
-        Hello, I'm
+    <h1>
+        Hello, I'm <br>
         <span>Auni Hazirah</span>
-      </h1>
+    </h1>
 
-      <p class="intro">
-        Welcome to my personal blog where I share about myself,
-        my learning journey, hobbies, goals, and experiences
-        as a software development student.
-      </p>
+    <p class="role">
+        Software Development Student
+    </p>
 
-      <div class="home-buttons">
+    <p class="intro">
+        This is a small space where I share my learning journey,
+        projects, and experiences throughout my studies.
+    </p>
 
+    <div class="academic-info">
+        CGPA 3.66 • Dean's List Student
+    </div>
+
+    <div class="button-group">
+
+       
         <button class="enter-btn" onclick="openDiary()">
-          Enter About Me ♡
+            Get to Know Me
         </button>
-        </a>
 
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- QUICK SECTION -->
-
-  <section class="quick-section">
-
-    <div class="quick-card">
-      <h3>About Me</h3>
-
-      <p>
-        Learn more about my background,
-        education, interests, and personal goals.
-      </p>
     </div>
 
-    <div class="quick-card">
-      <h3>My Blog</h3>
-
-      <p>
-        Read simple posts about my learning journey,
-        project experience, and future plans.
-      </p>
-    </div>
-
-    <div class="quick-card">
-      <h3>Contact</h3>
-
-      <p>
-        Connect with me through the contact page
-        and send a short message.
-      </p>
-    </div>
-
-  </section>
-
-  <!-- MUSIC -->
+</main>
+ 
 
   <audio id="bgMusic" loop>
     <source src="music/song.mp3" type="audio/mp3">
   </audio>
-
-  <!-- MUSIC BUTTON -->
 
   <div class="music-player" onclick="toggleMusic()">
     <span id="musicText">🎧 Soft Music</span>
